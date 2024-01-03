@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            background-image: url(fashion-beauty-concept-closeup-elegant-brunette-woman-with-red-lips-black-dress-laughing-coqu.jpg);
+            height: 95vh; /* Adjusted height to cover the viewport */
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif; 
+            display: flex;
+           
+            flex-direction: column;
+            color: #333; /* Adjust text color for better visibility */
+        }
+
+        .logo {
+            background-image: url('logo-no-background.png');
+            height: 80px;
+            width: 80px;
+            margin-top: 2px;
+            padding-top: 2px;
+        }
+
+        .about {
+            display: none; /* Hide the content initially */
+            animation: fadeIn 1s forwards; /* Use animation to fade in the content */
+            padding-top: 50px;
+            padding-left: 460px;
+            margin-left: 150px;
+            margin-right: 100px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+                display: block; /* Show the content */
+            }
+        }
+
+        .Joinnow {
+            text-align: center;
+            margin-top: 20px; /* Adjust spacing between the description and button */
+            padding-left: 0px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #d4add0; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <nav>
+            <img src="logo-no-background.png" alt="IvyGemmies Logo" class="logo">
+            <!-- Add your navigation items here if needed -->
+        </nav>
+    </div>
+
+    <div class="about">
+        <pre><h3>                                    Welcome to IvyGemmies,
+             where our passion for timeless elegance and exquisite craftsmanship converges. 
+        Born from a love for jewelry's transformative power,
+        IvyGemmies curates a symphony of sophistication and beauty in every piece.
+              Guided by a commitment to superior quality and innovative design,
+         we blend traditional artistry with contemporary flair, crafting treasures
+                that resonate with grace and allure.
+         With each creation, we aspire to adorn your moments, embody your style, 
+                 and become part of your story. 
+        Join us on this enchanting journey as we celebrate the artistry of fine jewelry,
+         inviting you to indulge in the captivating world of IvyGemmies</pre>
+        </h3></pre>
+        <div class="Joinnow">
+            <a href="#diya"><button class="btn btn-primary">Join Now</button></a>
+        </div>
+    </div>
+   
+    <script>
+        setTimeout(function() {
+            document.querySelector('.about').style.display = 'block';
+        }, 1000); // Show the content after 2 seconds (2000 milliseconds)
+    </script>
+</body>
+</html>
