@@ -176,13 +176,13 @@
           <p class="header-action-label">Search</p>
         </button>
 
-        <button class="header-action-btn">
+      <button class="header-action-btn">
           <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
-
           <p class="header-action-label">Cart</p>
-
-          <div class="btn-badge green" aria-hidden="true">3</div>
-        </button>
+          <div id="cart-badge" class="btn-badge green" aria-hidden="true">0</div>
+      </button>
+      
+      
 
         <button class="header-action-btn">
           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
@@ -1257,6 +1257,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       let totalPrice = 0;
+      let totalItems = 0;
   
       function addToCart(productName, imageSrc, price) {
         // Create a new cart item element
@@ -1278,9 +1279,11 @@
         // Append the item to the cart
         document.getElementById("cart-items").appendChild(cartItem);
   
-        // Update the total price
+        // Update the total price and total items
         totalPrice += price;
+        totalItems += 1;
         document.getElementById("total-price").innerText = `Total: &pound;${totalPrice.toFixed(2)}`;
+        document.getElementById("cart-badge").innerText = totalItems;
   
         // Show the cart section with a slide-in effect
         document.getElementById("cart-section").style.right = "0";
@@ -1290,14 +1293,27 @@
         // Remove the item from the cart
         document.getElementById("cart-items").removeChild(cartItem);
   
-        // Update the total price
+        // Update the total price and total items
         totalPrice -= price;
+        totalItems -= 1;
         document.getElementById("total-price").innerText = `Total: &pound;${totalPrice.toFixed(2)}`;
+        document.getElementById("cart-badge").innerText = totalItems;
+  
+        // If all items are removed, hide the cart section
+        if (totalItems === 0) {
+          document.getElementById("cart-section").style.right = "-300px";
+        }
       }
   
       function closeCart() {
         // Hide the cart section with a slide-out effect
         document.getElementById("cart-section").style.right = "-300px";
+      }
+
+      // Function to open the cart
+      function openCart() {
+        // Show the cart section with a slide-in effect
+        document.getElementById("cart-section").style.right = "0";
       }
   
       // Function to handle the "Buy Now" button
@@ -1320,10 +1336,13 @@
   
       // Attach the closeCart function to the close button
       document.getElementById("close-btn").addEventListener("click", closeCart);
+
+      // Attach the openCart function to the "Cart" button
+      document.querySelector(".header-action-btn ion-icon[name='cart-outline']").closest('.header-action-btn').addEventListener("click", openCart);
+
     });
-  </script>
-  
-  
+</script>
+
 
   
   <!-- 
