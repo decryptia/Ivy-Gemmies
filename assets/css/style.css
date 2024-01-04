@@ -14,6 +14,210 @@
  * #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+body {
+ margin: 0;
+ font-family: Arial, sans-serif;
+}
+/* Rest of your existing styles */
+#wishlist-bar {
+position: fixed;
+top: 0;
+right: -300px; /* Initially hide the bar to the right */
+height: 100%;
+width: 300px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+overflow-y: auto;
+transition: right 0.3s ease;
+z-index: 1000; /* Ensure it is above other elements */
+}
+
+.remove-from-wishlist-btn {
+background-color: red;
+color: white;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+margin-left: 10px; /* Adjust margin as needed */
+}
+.wishlist-content {
+padding: 20px;
+}
+
+.wishlist-item {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.wishlist-item img {
+width: 50px;
+height: 50px;
+margin-right: 10px;
+}
+
+.wishlist-item p {
+margin: 0;
+}
+
+.add-to-cart-btn {
+background-color: pink;
+color: #fff;
+padding: 5px 10px;
+border: none;
+cursor: pointer;
+margin-left: auto; /* Align to the right */
+}
+
+.close-wishlist-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 24px;
+cursor: pointer;
+background: none;
+border: none;
+}
+
+/* Tooltip styles */
+.navbar-list {
+list-style: none;
+padding: 0;
+display: flex;
+}
+.remove-btn {
+background-color:rgb(195, 8, 39);
+color: #fff;
+border: none;
+padding: 5px 7px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+background-color: rgb(165, 7, 34);
+}
+
+.navbar-list li {
+margin-right: 20px;
+position: relative; /* Ensure the parent element is relative for absolute positioning */
+}
+
+.tooltip-text {
+visibility: hidden;
+width: 150px;
+background-color: #595555;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px;
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -75px;
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+.contact-tooltip:hover .tooltip-text {
+visibility: visible;
+opacity: 1;
+}
+
+#cart-section {
+position: fixed;
+top: 0;
+right: -300px;
+width: 300px;
+height: 100%;
+background-color: rgb(250, 238, 241);
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+transition: right 0.3s ease-in-out;
+z-index: 1000;
+}
+
+#cart-section h2 {
+margin-bottom: 10px;
+}
+
+#cart-items img {
+width: 50px;
+height: 50px;
+margin-right: 10px;
+}
+
+#total-price {
+margin-top: 20px;
+font-weight: bold;
+}
+
+.btn-close {
+background-color: #333;
+color: #fff;
+border: none;
+padding: 10px;
+cursor: pointer;
+position: absolute;
+top: 10px;
+right: 10px;
+}
+
+.product-card {
+position: relative;
+}
+
+.product-details {
+position: absolute;
+top: 0;
+right: 0;
+background-color: rgba(255, 255, 255, 0.9);
+padding: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: none;
+}
+
+.product-card:hover .product-details {
+display: block;
+}
+
+.buy-now-btn {
+background-color: pink;
+color: #fff;
+padding: 5px 10px;
+border: none;
+cursor: pointer;
+margin-top: 10px;
+}
+.wishlist-bar {
+position: fixed;
+top: 0;
+right: -300px; /* Initially hide the bar to the right */
+height: 100%;
+width: 300px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+overflow-y: auto;
+transition: right 0.3s ease;
+}
+
+.wishlist-content {
+padding: 20px;
+}
+
+.close-wishlist-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 24px;
+cursor: pointer;
+background: none;
+border: none;
+}
+
+
+
 :root {
 
   /**
