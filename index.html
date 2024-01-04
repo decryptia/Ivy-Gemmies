@@ -1256,7 +1256,24 @@
       let totalPrice = 0;
       let totalItems = 0;
   
+      // Function to check if the user is signed in
+      function isUserSignedIn() {
+        // Replace this with your actual sign-in check logic
+        // You might use cookies, local storage, or a server-side authentication check
+        // For simplicity, let's assume a variable "userSignedIn" represents the sign-in status
+        const userSignedIn = false; // Change this to your actual check
+        return userSignedIn;
+      }
+  
       function addToCart(productName, imageSrc, price) {
+        // Check if the user is signed in
+        if (!isUserSignedIn()) {
+          // If not signed in, prompt the user to sign in
+          alert("Please sign in to add items to the cart.");
+          // You can redirect to the sign-in page or show a sign-in modal here
+          return;
+        }
+  
         // Create a new cart item element
         const cartItem = document.createElement("li");
         const removeBtn = document.createElement("button");
@@ -1306,7 +1323,7 @@
         // Hide the cart section with a slide-out effect
         document.getElementById("cart-section").style.right = "-300px";
       }
-
+  
       // Function to open the cart
       function openCart() {
         // Show the cart section with a slide-in effect
@@ -1333,12 +1350,13 @@
   
       // Attach the closeCart function to the close button
       document.getElementById("close-btn").addEventListener("click", closeCart);
-
+  
       // Attach the openCart function to the "Cart" button
       document.querySelector(".header-action-btn ion-icon[name='cart-outline']").closest('.header-action-btn').addEventListener("click", openCart);
-
+  
     });
-</script>
+  </script>
+  
 
 
   

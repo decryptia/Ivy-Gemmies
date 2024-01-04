@@ -7,15 +7,14 @@
     <style>
         body {
             background-image: url(fashion-beauty-concept-closeup-elegant-brunette-woman-with-red-lips-black-dress-laughing-coqu.jpg);
-            height: 95vh; /* Adjusted height to cover the viewport */
+            height: 95vh;
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat;
             font-family: Arial, sans-serif; 
             display: flex;
-           
             flex-direction: column;
-            color: #333; /* Adjust text color for better visibility */
+            color: #333;
         }
 
         .logo {
@@ -27,8 +26,8 @@
         }
 
         .about {
-            display: none; /* Hide the content initially */
-            animation: fadeIn 1s forwards; /* Use animation to fade in the content */
+            display: none;
+            animation: fadeIn 1s forwards;
             padding-top: 50px;
             padding-left: 460px;
             margin-left: 150px;
@@ -41,19 +40,24 @@
             }
             100% {
                 opacity: 1;
-                display: block; /* Show the content */
+                display: block;
             }
         }
 
-        .Joinnow {
+        .buttons {
             text-align: center;
-            margin-top: 20px; /* Adjust spacing between the description and button */
-            padding-left: 0px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .buttons button {
+            margin-right: 10px;
         }
 
         .btn {
             padding: 10px 20px;
-            background-color: #d4add0; /* Button color */
+            background-color: #d4add0;
             color: white;
             border: none;
             border-radius: 5px;
@@ -66,7 +70,6 @@
     <div class="logo">
         <nav>
             <img src="logo-no-background.png" alt="IvyGemmies Logo" class="logo">
-            <!-- Add your navigation items here if needed -->
         </nav>
     </div>
 
@@ -83,15 +86,16 @@
         Join us on this enchanting journey as we celebrate the artistry of fine jewelry,
          inviting you to indulge in the captivating world of IvyGemmies</pre>
         </h3></pre>
-        <div class="Joinnow">
+        <div class="buttons">
             <a href="#diya"><button class="btn btn-primary">Join Now</button></a>
+            <a href="index.html"><button class="btn btn-primary">Go back to Home</button></a>
         </div>
     </div>
    
     <script>
         setTimeout(function() {
             document.querySelector('.about').style.display = 'block';
-        }, 1000); // Show the content after 2 seconds (2000 milliseconds)
+        }, 1000);
     </script>
 </body>
 </html>
