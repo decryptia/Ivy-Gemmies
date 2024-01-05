@@ -31,6 +31,24 @@ overflow-y: auto;
 transition: right 0.3s ease;
 z-index: 1000; /* Ensure it is above other elements */
 }
+#map-container {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.footer-link:hover + #map-container,
+#map-container:hover {
+  display: block;
+}
+
+/* Style the map container */
+#map-container {
+  width: 600px;
+  height: 450px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .remove-from-wishlist-btn {
 background-color: red;
