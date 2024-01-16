@@ -18,7 +18,9 @@ for (let i = 0; i < navElemArr.length; i++) {
   });
 }
 
-
+document.getElementById('instagram-link').addEventListener('click', function() {
+  window.open('https://www.instagram.com/ivy.gemmies/', '_blank');
+});
 
 /**
  * add active class on header when scrolled 200px from top
