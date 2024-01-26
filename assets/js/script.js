@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cartItem.innerHTML = `
   <img src="${imageSrc}" alt="${productName}">
   <p>${productName} - &pound;${price.toFixed(2)}</p>
-  <button class="buy-now-btn" onclick="window.location.href='buynow.html'">Buy Now</button>
+  <button class="buy-now-btn" onclick="window.location.href='buynow.php'">Buy Now</button>
 `;
     cartItem.appendChild(removeBtn);
 
@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to handle the "Buy Now" button
   function buyNow(productName, price) {
-  // Redirect to buynow.html
-  window.location.href = "buynow.html";
+  // Redirect to buynow.php
+  window.location.href = "buynow.php";
 }
 
 function openWishlist() {
