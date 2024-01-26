@@ -143,13 +143,11 @@
       <section class="section product">
         <div class="container">
 
-          <h2 id="diya" class="h2 section-title">Products of the week</h2>
+          <h2 id="diya" class="h2 section-title">All Products</h2>
 
           <ul class="filter-list">
 
-            <li>
-              <button class="filter-btn  active">Best Seller</button>
-            </li>
+           
 
             
           </ul>
