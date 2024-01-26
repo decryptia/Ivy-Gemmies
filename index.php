@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,9 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ivy Gemmies</title>
 
-  <!-- 
-    - favicon
-  -->
+
+
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
   <!-- 
@@ -44,11 +43,20 @@
       </a>
 
       <div class="header-actions">
-
-        <a href="./signup/login.html" class="header-action-btn">
-          <button><ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-          <p class="header-action-label">Sign in</p></button>
-        </a>
+          <?php
+        session_start();
+         if (isset($_SESSION['user_id'])) {
+          echo '<a href="" class="header-action-btn">';
+          echo '<button><ion-icon name="person-outline" aria-hidden="true"></ion-icon>';
+          echo '<p class="header-action-label">' . $_SESSION['username'] . '</p></button></a>';
+          
+      } else {
+        echo '<a href="./signup/login.html" class="header-action-btn">';
+        echo '<button><ion-icon name="person-outline" aria-hidden="true"></ion-icon>';
+        echo '<p class="header-action-label">Sign in</p></button></a>';
+      }
+          ?>
+      
 
         <button class="header-action-btn">
           <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
@@ -756,7 +764,7 @@
 
           </ul>
 
-          <a href="products.html"><button class="btn btn-outline">View All Products</button></a>
+          <a href="products.php"><button class="btn btn-outline">View All Products</button></a>
 
         </div>
       </section>
@@ -1141,9 +1149,6 @@
       
 
   </footer>
-  <!-- side Cart JS -->
-  <!-- Cart section -->
-  <!-- Cart section script -->
   
   
 
@@ -1161,4 +1166,4 @@
 
 </body>
 
-</html>
+</html> 
