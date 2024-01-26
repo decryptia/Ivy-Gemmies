@@ -1,4 +1,4 @@
-# create database name jwellery
+# create database name ivygemmies
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,

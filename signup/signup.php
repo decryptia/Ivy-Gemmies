@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sss", $username, $email, $hashedPassword);
 
         if ($stmt->execute()) {
-            echo "Record added successfully";
+            echo "<script>alert('Congratulationsss!!!User registered')</script>";
+            header("Location: login.html");
             
         } else {
             echo "Error: " . $stmt->error;

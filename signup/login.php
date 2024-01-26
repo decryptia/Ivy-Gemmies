@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verify password
         if (password_verify($password, $db_password_hash)) {
             // Password is correct, set session variables
+            session_start();
             $_SESSION['user_id'] = $user_id;
             $_SESSION['username'] = $db_username;
 
@@ -32,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $updateStmt->execute();
 
             // Redirect to a dashboard or home page
-            header("Location: dashboard.html");
+            header("Location: ../index.php");
             exit();
         } else {
             // Password is incorrect
