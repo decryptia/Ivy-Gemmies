@@ -59,7 +59,15 @@
             cursor: pointer;
         }
 
-        /* Optional: Add more styling based on your design preferences */
+        /* Make only the price text red */
+        p.price {
+            color: #333; /* Set the default color */
+        }
+
+        p.price span {
+            color: red; /* Set the color for the price text within the span */
+            
+        }
     </style>
 </head>
 <body>
@@ -78,11 +86,13 @@
         ?>
 
         <p>Product Name: <?php echo $productName; ?></p>
+        <p>Image:</p>
         <img src="<?php echo $imageSrc; ?>" alt="<?php echo $productName; ?>">
-        <p>Price: &pound;<?php echo $price; ?></p>
+        <!-- Apply the "price" class to the price element and use a span for the price text -->
+        <p class="price">Price:<span> &pound;<?php echo $price; ?></span></p>
 
         <div class="buttons">
-            <button onclick="window.location.href='buynow.php'">Buy Now</button>
+            <button onclick="window.location.href=">Buy Now</button>
             <button onclick="window.location.href='index.php'">Home</button>
         </div>
     </div>
