@@ -44,7 +44,7 @@
 
       <div class="header-actions">
           <?php
-        session_start();
+         session_start();
          if (isset($_SESSION['user_id'])) {
           echo '<a href="" class="header-action-btn">';
           echo '<button><ion-icon name="person-outline" aria-hidden="true"></ion-icon>';

@@ -48,12 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     cartItem.innerHTML = `
-  <img src="${imageSrc}" alt="${productName}">
-  <p>${productName} - &pound;${price.toFixed(2)}</p>
-  <button class="buy-now-btn" onclick="window.location.href='buynow.php'">Buy Now</button>
-`;
+      <img src="${imageSrc}" alt="${productName}">
+      <p>${productName} - &pound;${price.toFixed(2)}</p>
+      <button class="buy-now-btn">Buy Now</button>
+    `;
     cartItem.appendChild(removeBtn);
-
 
     // Append the item to the cart
     document.getElementById("cart-items").appendChild(cartItem);
@@ -66,6 +65,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Show the cart section with a slide-in effect
     document.getElementById("cart-section").style.right = "0";
+
+    // Add event listener for the "Buy Now" button in the cart
+    const buyNowButtons = document.querySelectorAll(".buy-now-btn");
+    buyNowButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        buyNow(productName, imageSrc, price);
+      });
+    });
   }
 
   function removeFromCart(cartItem, price) {
@@ -96,10 +103,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Function to handle the "Buy Now" button
-  function buyNow(productName, price) {
-  // Redirect to buynow.php
-  window.location.href = "buynow.php";
-}
+  function buyNow(productName, imageSrc, price) {
+    // Construct the URL with query parameters
+    const url = `buynow.php?productName=${encodeURIComponent(productName)}&imageSrc=${encodeURIComponent(imageSrc)}&price=${encodeURIComponent(price)}`;
+  
+    // Redirect to buynow.php with the product details as query parameters
+    window.location.href = url;
+  }
+
+  document.getElementById("close-btn").addEventListener("click", closeCart);
+  document.querySelector(".header-action-btn ion-icon[name='cart-outline']").closest('.header-action-btn').addEventListener("click", openCart);
+  
 
 function openWishlist() {
   // Show the wishlist section with a slide-in effect
