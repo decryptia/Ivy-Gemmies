@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let totalPrice = 0;
   let totalItems = 0;
 
-  function addToCart(productName, imageSrc, price) {
+  function addToCart(productName, id, imageSrc, price) {
     // Create a new cart item element
     const cartItem = document.createElement("li");
     const removeBtn = document.createElement("button");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     cartItem.innerHTML = `
-      <img src="${imageSrc}" alt="${productName}">
+      <img src="${imageSrc}" alt="${productName}" id="${id}">
       <p>${productName} - &pound;${price.toFixed(2)}</p>
       <button class="buy-now-btn">Buy Now</button>
     `;
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const buyNowButtons = document.querySelectorAll(".buy-now-btn");
     buyNowButtons.forEach((button) => {
       button.addEventListener("click", function () {
-        buyNow(productName, imageSrc, price);
+        buyNow(productName, id, imageSrc, price);
       });
     });
   }
@@ -103,9 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Function to handle the "Buy Now" button
-  function buyNow(productName, imageSrc, price) {
+  function buyNow(productName,id, imageSrc, price) {
     // Construct the URL with query parameters
-    const url = `buynow.php?productName=${encodeURIComponent(productName)}&imageSrc=${encodeURIComponent(imageSrc)}&price=${encodeURIComponent(price)}`;
+    const url = `buynow.php?productName=${encodeURIComponent(productName)}&productid=${id}&imageSrc=${encodeURIComponent(imageSrc)}&price=${encodeURIComponent(price)}`;
   
     // Redirect to buynow.php with the product details as query parameters
     window.location.href = url;
@@ -125,9 +125,10 @@ addToCartButtons.forEach((button) => {
   button.addEventListener("click", function () {
     const productCard = button.closest(".product-card");
     const productName = productCard.querySelector(".card-title a").innerText;
+    const id= productCard.querySelector(".card-banner img").getAttribute("id");
     const imageSrc = productCard.querySelector(".card-banner img").src;
     const price = parseFloat(productCard.querySelector(".card-price data").getAttribute("value"));
-    addToCart(productName, imageSrc, price);
+    addToCart(productName, id, imageSrc, price);
   });
 });
 
@@ -137,9 +138,10 @@ document.querySelector(".header-action-btn ion-icon[name='heart-outline']").clos
 
   document.addEventListener('addToCart', function (event) {
     const productName = event.detail.productName;
+    const id=event.detail.id;
     const imageSrc = event.detail.imageSrc;
     const price = event.detail.price;
-    addToCart(productName, imageSrc, price);
+    addToCart(productName,id, imageSrc, price);
   });
 });
 
