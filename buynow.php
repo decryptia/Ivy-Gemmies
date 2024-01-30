@@ -88,14 +88,21 @@
 
         <p>Product Name: <?php echo $productName; ?></p>
         <p>Image:</p>
-        <img src="<?php echo $imageSrc; ?>" alt="<?php echo $productName; ?>" id="<?php echo $productName; ?> ">
+        <img src="<?php echo $imageSrc; ?>" alt="<?php echo $productName; ?>" id="<?php echo $productid; ?>" class="order">
         <!-- Apply the "price" class to the price element and use a span for the price text -->
         <p class="price">Price:<span> &pound;<?php echo $price; ?></span></p>
 
         <div class="buttons">
-            <button onclick="window.location.href=">Buy Now</button>
+            <button onclick="orderphp()">Buy Now</button>
             <button onclick="window.location.href='index.php'">Home</button>
         </div>
     </div>
+    <script>
+        function orderphp(){
+            const id= document.querySelector(".order").getAttribute("id");
+            const url = `order.php?&productid=${id}`;
+            window.location.href=url 
+        }
+    </script>
 </body>
 </html>

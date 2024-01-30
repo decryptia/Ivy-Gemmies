@@ -77,8 +77,14 @@
 
           <p class="header-action-label">Wishlisht</p>
 
-          <div class="btn-badge" aria-hidden="true">2</div>
         </button>
+        
+        <button class="header-action-btn" onclick="window.location.href='myorders.php'">
+            <p class="header-action-label">My Orders</p>
+        </button>
+         
+        
+
 
       </div>
 
