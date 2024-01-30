@@ -242,7 +242,7 @@ mysqli_close($conn);
         - #BLOG
      
 
-  <!-- 
+  
     - #FOOTER
   -->
 
