@@ -179,7 +179,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="product-card">';
         echo '<figure class="card-banner">';
         echo '<a href="#">';
-        echo '<img src="' . $imageSrc . '" alt="' . $row['name'] . '" loading="lazy" width="800" height="1034" class="w-100">';
+        echo '<img src="' . $imageSrc . '" alt="' . $row['name'] . '" id="'.$row['id'].'" loading="lazy" width="800" height="1034" class="w-100">';
         echo '</a>';
 
         if ($discount > 0) {

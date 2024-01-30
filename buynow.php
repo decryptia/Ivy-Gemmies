@@ -83,11 +83,12 @@
         $productName = isset($_GET['productName']) ? $_GET['productName'] : 'Product Name Not Available';
         $imageSrc = isset($_GET['imageSrc']) ? $_GET['imageSrc'] : 'Image Source Not Available';
         $price = isset($_GET['price']) ? $_GET['price'] : 'Price Not Available';
+        $productid = isset($_GET['productid']) ? $_GET['productid'] : 'Product Not Available';
         ?>
 
         <p>Product Name: <?php echo $productName; ?></p>
         <p>Image:</p>
-        <img src="<?php echo $imageSrc; ?>" alt="<?php echo $productName; ?>">
+        <img src="<?php echo $imageSrc; ?>" alt="<?php echo $productName; ?>" id="<?php echo $productName; ?> ">
         <!-- Apply the "price" class to the price element and use a span for the price text -->
         <p class="price">Price:<span> &pound;<?php echo $price; ?></span></p>
 
