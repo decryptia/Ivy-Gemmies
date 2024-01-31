@@ -82,6 +82,10 @@
         <button class="header-action-btn" onclick="window.location.href='myorders.php'">
             <p class="header-action-label">My Orders</p>
         </button>
+        <button class="header-action-btn" onclick="window.location.href='logout.php'">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <p class="header-action-label">logout</p>
+        </button>
          
         
 
