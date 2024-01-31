@@ -182,11 +182,11 @@ if (mysqli_num_rows($result) > 0) {
         echo '<img src="' . $imageSrc . '" alt="' . $row['name'] . '" id="'.$row['id'].'" loading="lazy" width="800" height="1034" class="w-100">';
         echo '</a>';
 
-        if ($discount > 0) {
-            echo '<div class="card-badge red"> -' . $discount . '%</div>';
-        } elseif ($isNew) {
-            echo '<div class="card-badge green"> New</div>';
-        }
+        // if ($discount > 0) {
+        //     echo '<div class="card-badge red"> -' . $discount . '%</div>';
+        // } elseif ($isNew) {
+            // echo '<div class="card-badge green"> New</div>';
+        // }
 
         echo '<div class="card-actions">';
         echo '<button class="card-action-btn" aria-label="Quick view">';
@@ -209,10 +209,10 @@ if (mysqli_num_rows($result) > 0) {
         echo '<data value="' . $row['price'] . '">&pound;' . $row['price'] . '</data>';
 
         // Optionally, you can display the original price if there is a discount
-        if ($discount > 0) {
-            $originalPrice = $row['price'] + ($row['price'] * $discount / 100);
-            echo '<data value="' . $originalPrice . '">&pound;' . $originalPrice . '</data>';
-        }
+        // if ($discount > 0) {
+        //     $originalPrice = $row['price'] + ($row['price'] * $discount / 100);
+        //     echo '<data value="' . $originalPrice . '">&pound;' . $originalPrice . '</data>';
+        // }
 
         echo '</div>';
         echo '</div>';
@@ -441,7 +441,7 @@ mysqli_close($conn);
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script2.js"></script>
 
   <!-- 
     - ionicon link
