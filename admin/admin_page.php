@@ -98,7 +98,7 @@ if(isset($message)){
       <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
          <h3>Add a New Product</h3>
          <input type="text" placeholder="Enter product name" name="product_name" class="box">
-         <input type="number" placeholder="Enter product price" name="product_price" class="box">
+         <input type="number" step="any" placeholder="Enter product price" name="product_price" class="box">
          <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
          <input type="submit" class="btn" name="add_product" value="Add Product">
       </form>
