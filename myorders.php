@@ -47,4 +47,5 @@ if (isset($_SESSION['selected_product']) && !empty($_SESSION['selected_product']
     echo '<div class="container">';
     echo '</div>';
 }
+
 ?>
