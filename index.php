@@ -338,7 +338,7 @@
                       height="1034" class="w-100">
                   </a>
 
-                  <div class="card-badge red"> -25%</div>
+                 
 
                   <div class="card-actions">
 
@@ -368,7 +368,7 @@
                   <div class="card-price">
                     <data value="800.75">&pound;800.75</data>
 
-                    <data value="600.57">&pound;600.57</data>
+                    
                   </div>
                 </div>
 
