@@ -783,134 +783,6 @@
         - #BLOG
       -->
 
-      <section class="section blog">
-        <div class="container">
-
-          <h2 class="h2 section-title">Latest fashion news</h2>
-
-          <ul class="blog-list">
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-                  <a href="#">
-                    <img src="./assets/images/blog-1.jpg" alt="Worthy Cyber Monday Fashion From Casmart" loading="lazy"
-                      width="1020" height="700" class="w-100">
-                  </a>
-                </figure>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="folder-open-outline"></ion-icon>
-
-                      <a href="#" class="card-meta-link">Fashion</a>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline"></ion-icon>
-
-                      <a href="#" class="card-meta-link">
-                        <time datetime="2021-03-31">31 Mar 2021</time>
-                      </a>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Worthy Cyber Monday Fashion From Casmart</a>
-                  </h3>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-                  <a href="#">
-                    <img src="./assets/images/blog-2.jpg" alt="Holiday Home Decoration I’ve Recently Ordered"
-                      loading="lazy" width="1020" height="700" class="w-100">
-                  </a>
-                </figure>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="folder-open-outline"></ion-icon>
-
-                      <a href="#" class="card-meta-link">Fashion</a>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline"></ion-icon>
-
-                      <a href="#" class="card-meta-link">
-                        <time datetime="2021-03-31">31 Mar 2021</time>
-                      </a>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Holiday Home Decoration I’ve Recently Ordered</a>
-                  </h3>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-                  <a href="#">
-                    <img src="./assets/images/blog-3.jpg" alt="Unique Ideas for Fashion You Haven’t heard yet"
-                      loading="lazy" width="1020" height="700" class="w-100">
-                  </a>
-                </figure>
-
-                <div class="card-content">
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="folder-open-outline"></ion-icon>
-
-                      <a href="#" class="card-meta-link">Fashion</a>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="time-outline"></ion-icon>
-
-                      <a href="#" class="card-meta-link">
-                        <time datetime="2021-03-31">31 Mar 2021</time>
-                      </a>
-                    </li>
-
-                  </ul>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Unique Ideas for Fashion You Haven’t heard yet</a>
-                  </h3>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
 
 
 
@@ -1052,28 +924,26 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Handbags & Wallets</a>
+            <a href="#" class="footer-link">Rings</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Women's Clothing</a>
+            <a href="#" class="footer-link">Necklaces</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Plus Sizes</a>
+            <a href="#" class="footer-link">Bracelets</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Complete Your Look</a>
+            <a href="#" class="footer-link">Earrings</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Baby Corner</a>
+            <a href="#" class="footer-link">Hoops</a>
           </li>
 
-          <li>
-            <a href="#" class="footer-link">Man & Woman Shoe</a>
-          </li>
+          
 
         </ul>
 
@@ -1135,7 +1005,7 @@
         <div class="payment">
           <p class="payment-title">We Support</p>
 
-          <img src="./assets/images/payment-img.png" alt="Online payment logos" class="payment-img">
+          <img src="./assets/images/esewa.png" alt="Online payment logos" class="payment-img">
         </div>
 
       </div>

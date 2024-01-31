@@ -335,27 +335,23 @@ mysqli_close($conn);
           </li>
 
           <li>
-            <a href="#" class="footer-link">Handbags & Wallets</a>
+            <a href="#" class="footer-link">Rings</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Women's Clothing</a>
+            <a href="#" class="footer-link">Necklaces</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Plus Sizes</a>
+            <a href="#" class="footer-link">Bracelets</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Complete Your Look</a>
+            <a href="#" class="footer-link">Earrings</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Baby Corner</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Man & Woman Shoe</a>
+            <a href="#" class="footer-link">Hoops</a>
           </li>
 
         </ul>
@@ -418,7 +414,7 @@ mysqli_close($conn);
         <div class="payment">
           <p class="payment-title">We Support</p>
 
-          <img src="./assets/images/payment-img.png" alt="Online payment logos" class="payment-img">
+          <img src="./assets/images/esewa.png" alt="Online payment logos" class="payment-img">
         </div>
 
       </div>

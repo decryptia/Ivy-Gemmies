@@ -1,60 +1,50 @@
 <?php
-require_once "./signup/db_connect.php"; // Make sure to include the database connection file
-
+// Start or resume a session
 session_start();
 
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ./signup/login.html");
-    exit;
+// Check if selected_products is set in the session
+if (isset($_SESSION['selected_products']) && !empty($_SESSION['selected_products'])) {
+    $selectedProducts = $_SESSION['selected_products'];
+
+    // Display all selected products
+    echo '<div class="container">';
+    echo '<p>Selected Products in My Orders:</p>';
+    foreach ($selectedProducts as $selectedProduct) {
+        echo '<p>Product Name: ' . $selectedProduct['productName'] . '</p>';
+        echo '<p>Image:</p>';
+        echo '<img src="' . $selectedProduct['imageSrc'] . '" alt="' . $selectedProduct['productName'] . '" class="order" style="max-width: 20%; height: auto;">';
+        echo '<p class="price">Price: &pound;' . $selectedProduct['price'] . '</p>';
+        echo '<hr>';
+    }
+    echo '</div>';
 }
 
-$user_id = $_SESSION['user_id'];
+// Check if the selected product is stored in the session
+if (isset($_SESSION['selected_product']) && !empty($_SESSION['selected_product'])) {
+    $selectedProduct = $_SESSION['selected_product'];
+    // Retrieve product details
+    $productName = $selectedProduct['productName'];
+    $imageSrc = $selectedProduct['imageSrc'];
+    $price = $selectedProduct['price'];
+    $productid = $selectedProduct['productid'];
 
-// Retrieve user orders from the database
-$sql = "SELECT orders.order_id, products.name, products.image, orders.total_amount
-        FROM orders
-        JOIN products ON orders.product_id = products.id
-        WHERE orders.user_id = ?";
-$stmt = $conn->prepare($sql);
+    // Display the selected product
+    echo '<div class="container">';
+    echo '<p>Selected Product in My Orders:</p>';
+    echo '<p>Product Name: ' . $productName . '</p>';
+    echo '<p>Image:</p>';
+    echo '<img src="' . $imageSrc . '" alt="' . $productName . '" class="order">';
+    echo '<p class="price">Price: &pound;' . $price . '</p>';
+    echo '</div>';
+} else {
+    // Set default values if the session variable is not set
+    $productName = 'Product Name Not Available';
+    $imageSrc = '#';
+    $price = 'N/A';
+    $productid = 'N/A';
 
-if (!$stmt) {
-    die("Error in SQL query: " . $conn->error);
+    // Display a message for no selected product
+    echo '<div class="container">';
+    echo '</div>';
 }
-
-$stmt->bind_param('i', $user_id);
-$stmt->execute();
-
-if (!$stmt->execute()) {
-    die("Error executing SQL query: " . $stmt->error);
-}
-
-$result = $stmt->get_result();
-
-// Display user orders
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Add necessary head elements, styles, and scripts if needed -->
-    <title>My Orders - Ivy Gemmies</title>
-</head>
-
-<body>
-
-    <!-- Your HTML and PHP code to display orders -->
-    <h2>My Orders</h2>
-
-    <?php while ($row = $result->fetch_assoc()) : ?>
-        <div class="order-item">
-            <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>" width="50" height="50">
-            <p><?php echo $row['name']; ?></p>
-            <p><?php echo 'Price: $' . $row['total_amount']; ?></p>
-        </div>
-    <?php endwhile; ?>
-
-</body>
-
-</html>
